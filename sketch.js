@@ -124,12 +124,17 @@ function draw() {
 
     
    }
-
+   
+ if(count>5){
+   gameState = "End"
+  text("Game Over")
+ }
 
    
 }
 function mousePressed(){
   if(gameState !== "end"){
     particle = new Particle(mouseX,10,10);
+    count++
   }
 }
